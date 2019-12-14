@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-recipe-list (theRecipe)="recipe = $event"></app-recipe-list>
+    <!-- recipe == $event shortcut we can use it normally like we do in other place as create a function 
+            then assign the value of $event to a class varibale -->
+  </div>
+
+  <div class="col-md-7">
+    <app-recipe-detail *ngIf="recipe; else info" [recipeDetail]="recipe"></app-recipe-detail>
+    <ng-template #info>
+      <p>Please select a recipe</p>
+    </ng-template>
+  </div>
+</div>
