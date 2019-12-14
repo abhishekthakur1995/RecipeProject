@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+FLOW:::
+
+
+1. Recipe-Item
+
+## recipe - item pe click hoga to onSelected() call hoga.
+## onSelected() se(recipeSelected) event emit hoga jo control recipe - list ko de dega
+
+
+2. Recipe-List
+
+## (recipeSelected) iske emit hone ki wajah se onRecipeSelected() call hoga
+## onRecipeSelected() call hone se(theRecipe) event emit hoga  jo control recipe.component ko de dega
+
+
+3. Recipe.component
+
+## ye seedhe seedhe jo $event aaya hai jisme basically clicked recipe ka data hai uske is component ke variable mein assign kr dega
+
+
+
+
+
